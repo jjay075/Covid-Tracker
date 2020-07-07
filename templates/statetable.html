@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>State Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h3>{{ error }}</h3>  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/signout">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <br>
+  <br>
+  <div class="container">
+    <br>
+    <center>
+      <h2><strong>COVID-19 STATE DATA</strong></h2>
+    </center>  
+      <br>    
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th>STATE</th>
+            <th>CASES</th>
+            <th>ACTIVE</th>
+            <th>RECOVER</th>
+            <th>DEATHS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for temp in data %}
+        <tr>
+          <td>{{ temp[0] }}</td>
+          <td>{{ temp[1] }}</td>
+          <td>{{ temp[2] }}</td>
+          <td>{{ temp[3] }}</td>
+          <td>{{ temp[4] }}</td>
+        </tr>
+      {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+    </body>
+    </html>
+    

@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"  href="../static/custom.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+        <title>Stats</title>
+
+        <style>
+            .key{
+                color: cadetblue;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .value{
+                color: darkslategrey;
+                font-size: 30px;
+                font-family: "Montserrat", sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signout">Logout</a>
+              </li>
+            </ul>
+          </nav>
+          <br>
+          <br>
+          <br>
+          <br>
+    <div class="container-fluid card shadow p-3 mb-5 bg-white rounded" style="width: 78rem;">
+        <h1 style="text-align: center;">Corona Effect in {{state}}</h1><br><br>
+        {% for key, value in data.items() %}
+        <label class = "key" style="text-align: center;">{{key}}</label> <label class = "value" style="text-align: center;">{{value}}</label><br>
+        {% endfor %}
+    </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+.item{
+    float: right;
+}
+
+.link{
+    color: brown;
+}
+
+.centered {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.homehead{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif ;
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+}
+
+p,li,span{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif ;
+    font-weight: lighter;
+    font-size: 20px;
+    color: darkgray;
+}
+
+.col-md-4{
+    float: left;
+    margin: auto;
+ }
+ 
+.inner{
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 0.5s ease;
+    filter: grayscale(1);
+    /* -webkit-filter: grayscale(1); */
+}
+
+.inner:hover img{
+    transform: scale(1.5);
+    filter: grayscale(0);
+}
+
+.container{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
